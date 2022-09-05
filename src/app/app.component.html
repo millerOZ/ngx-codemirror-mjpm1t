@@ -1,0 +1,23 @@
+<hello name="{{ name }}"></hello>
+
+<ngx-codemirror
+  #codemirrorr
+  [options]="{
+    lineNumbers: true,
+    theme: 'idea',
+    mode: 'application/xml',
+    gutters: [
+      'CodeMirror-linenumbers',
+      'CodeMirror-foldgutter',
+      'CodeMirror-lint-markers'
+    ],
+    foldGutter: true,
+    autoCloseBrackets: true,
+    matchBrackets: true,
+    lineWrapping: true,
+    lint: true
+  }"
+  [ngModel]="xmlString"
+  (ngModelChange)="setEditorContent($event)"
+>
+</ngx-codemirror>
